@@ -1,4 +1,4 @@
-package com.pacemate.pacemate;
+package com.pacemate.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
