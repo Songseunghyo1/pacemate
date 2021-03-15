@@ -10,5 +10,4 @@ public class NoShowDay {
     private int classRoom;
     private int num;
     private String name;
-    private String uuid;
 }

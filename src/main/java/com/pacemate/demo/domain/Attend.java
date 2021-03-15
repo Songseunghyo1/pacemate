@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class Attend {
-    private String uuid;
     private int seq;
     private int grade;
     private int classRoom;
