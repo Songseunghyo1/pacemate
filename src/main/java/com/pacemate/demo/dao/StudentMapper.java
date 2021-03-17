@@ -1,4 +1,4 @@
-package com.pacemate.demo.mapper;
+package com.pacemate.demo.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 

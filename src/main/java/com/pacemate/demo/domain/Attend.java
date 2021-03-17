@@ -1,4 +1,4 @@
-package com.pacemate.demo.dto;
+package com.pacemate.demo.domain;
 
 import lombok.Data;
 
