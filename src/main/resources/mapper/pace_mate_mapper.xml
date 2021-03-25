@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pacemate.demo.dao.StudentMapper"> <!-- Mapper의 FQCN을 namespace으로 한다. -->
+    <select id="retrieveAllStudent" resultType="com.pacemate.demo.domain.Student">
+        SELECT    GRADE
+                , CLASS_ROOM
+                , NUM
+                , NAME
+                , SEAT_NUM
+                , IS_OUT
+        FROM    STUDENT
+    </select>
+</mapper>

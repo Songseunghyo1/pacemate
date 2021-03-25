@@ -1,6 +1,5 @@
 package com.pacemate.demo.config;
 
-import com.pacemate.demo.PacemateApplication;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;

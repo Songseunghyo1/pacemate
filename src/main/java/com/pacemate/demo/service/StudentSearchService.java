@@ -1,7 +1,10 @@
 package com.pacemate.demo.service;
 
-import org.springframework.stereotype.Service;
+import com.pacemate.demo.domain.Student;
 
-@Service
-public class StudentSearchService {
+import java.util.List;
+
+public interface StudentSearchService {
+
+    List<Student> retrieveAllStudent();
 }
