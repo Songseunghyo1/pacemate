@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface StudentSearchService {
 
+    void insertStudentInfo();
+
     List<Student> retrieveAllStudent();
 }

@@ -23,8 +23,7 @@ dependencies {
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.2'
 	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.4'
 	implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.12.RELEASE'
-
-
+	implementation group: 'com.opencsv', name: 'opencsv', version: '5.4'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
