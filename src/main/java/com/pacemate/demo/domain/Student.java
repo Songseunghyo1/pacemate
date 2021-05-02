@@ -9,5 +9,5 @@ public class Student {
     private int num;
     private String name;
     private int seatNum;
-    private boolean isOut;
+    private String outYn;
 }

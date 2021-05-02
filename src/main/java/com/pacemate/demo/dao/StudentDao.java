@@ -14,7 +14,7 @@ public interface StudentDao {
                            @Param("num") int num,
                            @Param("name") String name,
                            @Param("seatNum") int seatNum,
-                           @Param("isOut") int isOut);
+                           @Param("outYn") String outYn);
 
     List<Student> retrieveAllStudent();
 }

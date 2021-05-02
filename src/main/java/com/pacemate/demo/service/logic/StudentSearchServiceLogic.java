@@ -4,6 +4,8 @@ import com.pacemate.demo.dao.StudentDao;
 import com.pacemate.demo.domain.Student;
 import com.pacemate.demo.service.StudentSearchService;
 import com.pacemate.demo.util.CSVFileReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,7 @@ public class StudentSearchServiceLogic implements StudentSearchService {
     @Autowired
     private StudentDao studentDao;
 
+    private final Logger logger = LoggerFactory.getLogger(StudentSearchServiceLogic.class);
 
     @Override
     public void insertStudentInfo() {
@@ -26,7 +29,7 @@ public class StudentSearchServiceLogic implements StudentSearchService {
         String filePath = "D:\\csv\\20210327.csv.csv";
 
         try {
-            URI uri = uri = new URI("file:///D:/csv/20210327.csv");
+            URI uri = uri = new URI("file:///D:/csv/20210502.csv");
             File file = new File(uri);
             CSVFileReader csvFileReader = new CSVFileReader(file);
             studentInfoList = csvFileReader.getStudentInfoList();
@@ -41,15 +44,22 @@ public class StudentSearchServiceLogic implements StudentSearchService {
             int num = student.getNum();
             String name = student.getName();
             int seatNum = student.getSeatNum();
-            int isOut = student.isOut() == true ? 1 : 0;
+            String outYn = student.getOutYn();
 
-            studentDao.insertStudentInfo(grade, classRoom, num, name, seatNum, isOut);
+            studentDao.insertStudentInfo(grade, classRoom, num, name, seatNum, outYn);
         }
 
     }
 
     @Override
     public List<Student> retrieveAllStudent() {
+        List<Student> studentList = studentDao.retrieveAllStudent();
+
+        for (Student student : studentList) {
+            logger.info(student.getName());
+            logger.info(student.getOutYn());
+        }
+
         return studentDao.retrieveAllStudent();
     }
 }

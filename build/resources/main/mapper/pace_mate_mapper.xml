@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pacemate.demo.dao.StudentDao"> <!-- Mapper의 FQCN을 namespace으로 한다. -->
-    
+
     <insert id="insertStudentInfo">
         INSERT INTO STUDENT
         (
@@ -10,7 +10,7 @@
             , NUM
             , NAME 
             , SEAT_NUM
-            , IS_OUT
+            , OUTYN
         ) 
         VALUES 
         (
@@ -19,7 +19,7 @@
             , #{num}
             , #{name}
             , #{seatNum}
-            , #{isOut}
+            , #{outYn}
         )   
     </insert>
     
@@ -29,7 +29,7 @@
                 , NUM
                 , NAME
                 , SEAT_NUM
-                , IS_OUT
+                , OUTYN
         FROM    STUDENT
     </select>
 </mapper>

@@ -3,6 +3,8 @@ package com.pacemate.demo.util;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import com.pacemate.demo.domain.Student;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,6 +13,8 @@ import java.util.List;
 public class CSVFileReader {
 
     private File file;
+
+    private final Logger logger = LoggerFactory.getLogger(CSVFileReader.class);
 
     public CSVFileReader(File file) {
         this.file = file;
@@ -61,12 +65,12 @@ public class CSVFileReader {
 
         studentList = makeStudentListFromArr(studentRowList);
         for (Student student : studentList) {
-            System.out.println(student.getGrade());
-            System.out.println(student.getClassRoom());
-            System.out.println(student.getNum());
-            System.out.println(student.getName());
-            System.out.println(student.getSeatNum());
-            System.out.println(student.isOut());
+            logger.info(String.valueOf(student.getGrade()));
+            logger.info(String.valueOf(student.getClassRoom()));
+            logger.info(String.valueOf(student.getNum()));
+            logger.info(student.getName());
+            logger.info(String.valueOf(student.getSeatNum()));
+            logger.info(String.valueOf(student.getOutYn()));
         }
     }
 
@@ -96,12 +100,14 @@ public class CSVFileReader {
         student.setNum(Integer.parseInt(studentRow[2]));
         student.setName(studentRow[3]);
         student.setSeatNum(Integer.parseInt(studentRow[4]));
+        student.setOutYn(studentRow[5]);
 
-        boolean isOut = false;
-        if (Integer.parseInt(studentRow[5]) == 1) {
-            isOut = true;
-        }
-        student.setOut(isOut);
+        logger.info(studentRow[0]);
+        logger.info(studentRow[1]);
+        logger.info(studentRow[2]);
+        logger.info(studentRow[3]);
+        logger.info(studentRow[4]);
+        logger.info(studentRow[5]);
 
         return student;
     }
