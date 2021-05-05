@@ -10,7 +10,7 @@
             , NUM
             , NAME 
             , SEAT_NUM
-            , OUTYN
+            , OUT_YN
         ) 
         VALUES 
         (
@@ -29,7 +29,22 @@
                 , NUM
                 , NAME
                 , SEAT_NUM
-                , OUTYN
+                , OUT_YN
         FROM    STUDENT
+    </select>
+
+    <select id="retrieveStudentByStudentInfo" resultType="com.pacemate.demo.domain.Student">
+        SELECT GRADE
+             , CLASS_ROOM
+             , NUM
+             , NAME
+             , SEAT_NUM
+             , OUT_YN
+        FROM    STUDENT
+        WHERE GRADE      = IFNULL(#{grade}, GRADE)
+          AND CLASS_ROOM = IFNULL(#{classRoom}, CLASS_ROOM)
+          AND NUM = IFNULL(#{num}, NUM)
+          AND NAME = IFNULL(#{name}, NAME)
+          AND OUT_YN = IFNULL(#{outYn}, OUT_YN)
     </select>
 </mapper>

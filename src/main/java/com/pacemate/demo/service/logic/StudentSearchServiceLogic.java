@@ -62,4 +62,9 @@ public class StudentSearchServiceLogic implements StudentSearchService {
 
         return studentDao.retrieveAllStudent();
     }
+
+    @Override
+    public List<Student> retrieveStudentByStudentInfo(Integer grade, Integer classRoom, Integer num, String name, String outYn) {
+        return studentDao.retrieveStudentByStudentInfo(grade, classRoom, num, name, outYn);
+    }
 }

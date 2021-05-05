@@ -17,4 +17,10 @@ public interface StudentDao {
                            @Param("outYn") String outYn);
 
     List<Student> retrieveAllStudent();
+
+    List<Student> retrieveStudentByStudentInfo(@Param("grade") Integer grade,
+                                               @Param("classRoom") Integer classRoom,
+                                               @Param("num") Integer num,
+                                               @Param("name") String name,
+                                               @Param("outYn") String outYn);
 }

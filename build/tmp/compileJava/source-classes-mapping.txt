@@ -4,8 +4,8 @@ com/pacemate/demo/service/StudentSearchService.java
  com.pacemate.demo.service.StudentSearchService
 com/pacemate/demo/dao/StudentDao.java
  com.pacemate.demo.dao.StudentDao
-com/pacemate/demo/config/DatabaseConfig.java
- com.pacemate.demo.config.DatabaseConfig
+com/pacemate/demo/resource/StudentResource.java
+ com.pacemate.demo.resource.StudentResource
 com/pacemate/demo/domain/Student.java
  com.pacemate.demo.domain.Student
 com/pacemate/demo/util/CSVFileReader.java
@@ -18,5 +18,5 @@ com/pacemate/demo/PacemateApplication.java
  com.pacemate.demo.PacemateApplication
 com/pacemate/demo/domain/NoShowDay.java
  com.pacemate.demo.domain.NoShowDay
-com/pacemate/demo/resource/StudentResource.java
- com.pacemate.demo.resource.StudentResource
+com/pacemate/demo/config/DatabaseConfig.java
+ com.pacemate.demo.config.DatabaseConfig
