@@ -25,6 +25,16 @@ public class StudentResource {
         studentSearchService.insertStudentInfo();
     }
 
+    @PostMapping("/inject/student")
+    public void injectStudent(@RequestParam(value = "grade", required = false) Integer grade,
+                              @RequestParam(value = "classRoom", required = false) Integer classRoom,
+                              @RequestParam(value = "num", required = false) Integer num,
+                              @RequestParam(value = "name", required = false) String name,
+                              @RequestParam(value = "seatNum", required = false) Integer seatNum,
+                              @RequestParam(value = "outYn", required = false) String outYn) {
+        studentSearchService.insertStudent(grade, classRoom, num, name, seatNum, outYn);
+    }
+
     @GetMapping("/retrieve/all/student")
     public List<Student> retrieveAllStudentList() {
         return studentSearchService.retrieveAllStudent();

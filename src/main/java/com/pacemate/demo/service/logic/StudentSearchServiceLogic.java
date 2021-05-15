@@ -52,6 +52,11 @@ public class StudentSearchServiceLogic implements StudentSearchService {
     }
 
     @Override
+    public void insertStudent(Integer grade, Integer classRoom, Integer num, String name, Integer seatNum, String outYn) {
+        studentDao.insertStudentInfo(grade, classRoom, num, name, seatNum, outYn);
+    }
+
+    @Override
     public List<Student> retrieveAllStudent() {
         List<Student> studentList = studentDao.retrieveAllStudent();
 
