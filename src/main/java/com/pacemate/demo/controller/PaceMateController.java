@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PaceMateController {
 
     @RequestMapping(value = "/pacemate")
-    public String hello() {
+    public String index() {
         return "index.html";
+    }
+
+    @RequestMapping(value = "/pacemate/retrieve/student")
+    public String retrieveStudent() {
+        return "retrieve-student.html";
     }
 
     @RequestMapping(value = "/fileupload")
     public String fileUpload() {
-        return "fileUpload.html";
+        return "retrieve-student.html";
     }
 }
