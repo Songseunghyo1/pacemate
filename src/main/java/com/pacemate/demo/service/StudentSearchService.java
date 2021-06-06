@@ -12,5 +12,5 @@ public interface StudentSearchService {
 
     List<Student> retrieveAllStudent();
 
-    List<Student> retrieveStudentByStudentInfo(Integer grade, Integer classRoom, Integer num, String name, String outYn);
+    List<Student> retrieveStudentByStudentInfo(Integer grade, Integer classRoom, Integer num, String name);
 }

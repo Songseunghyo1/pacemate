@@ -45,6 +45,5 @@
           AND CLASS_ROOM = IFNULL(#{classRoom}, CLASS_ROOM)
           AND NUM = IFNULL(#{num}, NUM)
           AND NAME = IFNULL(#{name}, NAME)
-          AND OUT_YN = IFNULL(#{outYn}, OUT_YN)
     </select>
 </mapper>
