@@ -13,13 +13,18 @@ public class PaceMateController {
         return "index.html";
     }
 
-    @RequestMapping(value = "/pacemate/retrieve/student")
+    @RequestMapping(value = "/retrievestudent")
     public String retrieveStudent() {
         return "retrieve-student.html";
     }
 
     @RequestMapping(value = "/fileupload")
     public String fileUpload() {
-        return "retrieve-student.html";
+        return "file-upload.html";
+    }
+
+    @RequestMapping(value = "/manageattendance")
+    public String manageAttendance() {
+        return "manage-attendance.html";
     }
 }

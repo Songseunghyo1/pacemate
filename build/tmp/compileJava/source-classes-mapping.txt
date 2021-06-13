@@ -12,13 +12,13 @@ com/pacemate/demo/domain/Student.java
  com.pacemate.demo.domain.Student
 com/pacemate/demo/util/CSVFileReader.java
  com.pacemate.demo.util.CSVFileReader
-com/pacemate/demo/controller/PaceMateController.java
- com.pacemate.demo.controller.PaceMateController
+com/pacemate/demo/resource/StudentResource.java
+ com.pacemate.demo.resource.StudentResource
 com/pacemate/demo/service/logic/StudentSearchServiceLogic.java
  com.pacemate.demo.service.logic.StudentSearchServiceLogic
 com/pacemate/demo/PacemateApplication.java
  com.pacemate.demo.PacemateApplication
 com/pacemate/demo/domain/NoShowDay.java
  com.pacemate.demo.domain.NoShowDay
-com/pacemate/demo/resource/StudentResource.java
- com.pacemate.demo.resource.StudentResource
+com/pacemate/demo/controller/PaceMateController.java
+ com.pacemate.demo.controller.PaceMateController
