@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/pacemate
+    username: root
+    password: song151599
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: com.afterschool.selfstudy.pacemate.config.SnakeCasePhysicalNamingStrategy
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    show-sql: true
+    generate-ddl: true
