@@ -10,9 +10,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
       naming:
         physical-strategy: com.afterschool.selfstudy.pacemate.config.SnakeCasePhysicalNamingStrategy
-        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
     show-sql: true
     generate-ddl: true
