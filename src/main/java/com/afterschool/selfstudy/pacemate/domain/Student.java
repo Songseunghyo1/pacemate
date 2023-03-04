@@ -2,13 +2,11 @@ package com.afterschool.selfstudy.pacemate.domain;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "STUDENT")
 public class Student {
 
     @GeneratedValue
