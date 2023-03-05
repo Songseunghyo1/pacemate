@@ -21,7 +21,7 @@ public class StudentService {
         student.setName(studentReq.getName());
         student.setGrade(studentReq.getGrade());
         student.setClassroom(studentReq.getClassNo());
-        student.setFireYn(studentReq.isFired() == true ? "Y" : "N");
+        student.setFireYn(studentReq.getIsFired() == true ? "Y" : "N");
         student.setSeatNo(studentReq.getSeatNo());
         student.setNum(studentReq.getStudentNum());
 

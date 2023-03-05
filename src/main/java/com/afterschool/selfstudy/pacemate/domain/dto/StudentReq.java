@@ -6,6 +6,7 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class StudentReq {
 
     private String name;
@@ -13,6 +14,6 @@ public class StudentReq {
     private Long classNo;
     private Long studentNum;
     private Long seatNo;
-    private boolean isFired;
+    private Boolean isFired;
 
 }

@@ -19,38 +19,42 @@ public class StudentRepositoryImpl implements StudentSearchRepository {
 
         BooleanBuilder builder = new BooleanBuilder();
 
-        if (studentReq.getClassNo() != 0 && studentReq.getClassNo() != null) {
-            builder.and(QStudent.student.classroom.eq(studentReq.getClassNo()));
+        if (studentReq.getClassNo() != null) {
+            if (studentReq.getClassNo() != 0) {
+                builder.and(QStudent.student.classroom.eq(studentReq.getClassNo()));
+            }
         }
 
-        if (studentReq.getStudentNum() != 0 && studentReq.getStudentNum() != null) {
-            builder.and(QStudent.student.num.eq(studentReq.getStudentNum()));
+        if (studentReq.getStudentNum() != null) {
+            if (studentReq.getStudentNum() != 0) {
+                builder.and(QStudent.student.num.eq(studentReq.getStudentNum()));
+            }
         }
 
-        if (studentReq.getGrade() != 0 && studentReq.getGrade() != null) {
-            builder.and(QStudent.student.grade.eq(studentReq.getGrade()));
+        if (studentReq.getGrade() != null) {
+            if (studentReq.getGrade() != 0) {
+                builder.and(QStudent.student.grade.eq(studentReq.getGrade()));
+            }
         }
 
-        if (!studentReq.getName().equals("") && studentReq.getName() != null) {
+        if (studentReq.getName() != null) {
             builder.and(QStudent.student.name.eq(studentReq.getName()));
         }
 
-        if (studentReq.getSeatNo() != 0 && studentReq.getSeatNo() != null) {
-            builder.and(QStudent.student.seatNo.eq(studentReq.getSeatNo()));
+        if (studentReq.getSeatNo() != null) {
+            if (studentReq.getSeatNo() != 0) {
+                builder.and(QStudent.student.seatNo.eq(studentReq.getSeatNo()));
+            }
         }
 
         String firedYn = "";
-        if (studentReq.isFired()) {
-            firedYn = "Y";
-        } else {
-            firedYn = "N";
+        if (studentReq.getIsFired() != null) {
+            firedYn = studentReq.getIsFired() ? "Y" : "N";
+            builder.and(QStudent.student.fireYn.eq(firedYn));
         }
 
         return query.selectFrom(QStudent.student)
-                .where(
-                        QStudent.student
-                                .fireYn.eq(firedYn)
-                                .and(builder))
+                .where(builder)
                 .fetch();
     }
 
