@@ -10,7 +10,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
       naming:
         physical-strategy: com.afterschool.selfstudy.pacemate.config.SnakeCasePhysicalNamingStrategy
     show-sql: true

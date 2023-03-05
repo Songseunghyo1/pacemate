@@ -15,6 +15,8 @@ public class Student {
 
     private String name;
 
+    private Long grade;
+
     @Column(name = "STUDENT_NUM")
     private Long num;
 
