@@ -1,4 +1,3 @@
-/*
 package com.afterschool.selfstudy.pacemate.controller;
 
 import org.springframework.stereotype.Controller;
@@ -11,9 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class PaceMateViewController {
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
-        return "";
+        return "index";
     }
 }
-*/
